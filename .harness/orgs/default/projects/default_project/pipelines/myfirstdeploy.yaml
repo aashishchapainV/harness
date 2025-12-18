@@ -52,3 +52,9 @@ pipeline:
                 - AllErrors
               action:
                 type: StageRollback
+  variables:
+    - name: nginxTag
+      type: String
+      description: nginx tag
+      required: true
+      value: <+input>
