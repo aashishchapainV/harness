@@ -19,7 +19,7 @@ pipeline:
                 type: Kubernetes
                 spec:
                   variables:
-                    - name: nginxVersion
+                    - name: nginxTag
                       type: String
                       value: <+input>
           environment:
