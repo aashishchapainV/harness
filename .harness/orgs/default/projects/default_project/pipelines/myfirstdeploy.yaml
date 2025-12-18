@@ -14,6 +14,14 @@ pipeline:
           deploymentType: Kubernetes
           service:
             serviceRef: nginxservice
+            serviceInputs:
+              serviceDefinition:
+                type: Kubernetes
+                spec:
+                  variables:
+                    - name: nginxVersion
+                      type: String
+                      value: <+input>
           environment:
             environmentRef: LocalEnvironment
             deployToAll: false
